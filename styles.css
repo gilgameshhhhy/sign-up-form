@@ -1,4 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+@font-face {
+  font-family: 'Norse Bold';
+  src: url(./fonts/Norse-Bold.otf);
+}
 
 *,
 *::before,
@@ -13,11 +17,35 @@ body {
   display: flex;
   font-family: "Open Sans";
   background-color: #f3f3f3;
-  overflow: hidden;
 }
 
-img {
+.splash {
+  position: relative;
+}
+
+.splash-image {
   height: 100%;
+}
+
+.logo-container {
+  display: flex;
+  width: 100%;
+  position: absolute;
+  background-color: rgb(0,0,0,50%);
+  top: 15%;
+  justify-content: center;
+  align-items: center;
+  padding: 1em 0; 
+}
+
+.logo-image {
+  height: 8em;
+}
+
+.splash-title {
+  color: white;
+  font-family: 'Norse Bold';
+  font-size: 6em;
 }
 
 p {
@@ -32,6 +60,7 @@ p {
   display: flex;
   flex-flow: column;
   margin: 6em 3em 1em;
+  height: 20%;
 }
 
 .last {
@@ -72,13 +101,14 @@ input {
   padding: 0.5em;
 }
 
-.button-container {
-  padding-left: 3em;
-  margin-top: 2em;
+input:focus {
+  outline: none;
+  border: 1px blue solid;
+  box-shadow: 0 1px 2px 2px rgb(224, 224, 224);
 }
 
-.button-container > p {
-  margin-top: 2em;
+.button-container {
+  padding-left: 3em;
 }
 
 button {
@@ -90,6 +120,12 @@ button {
   font-weight: bold;
   color: white;
   cursor: pointer;
+  margin: 2em 0 2em;
+}
+
+button:hover {
+  color: #596D48;
+  background-color: white;
 }
 
 a {
